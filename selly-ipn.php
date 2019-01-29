@@ -1,8 +1,5 @@
 <?php
 
-// file_put_contents('ipn_info.txt', var_export($content, true), FILE_APPEND);
-// Debug any vars with var_export
-
 $secret_key = ''; // Insert your secret key found in account settings
 
 abstract class sellyOrderStatus {
