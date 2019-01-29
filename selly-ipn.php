@@ -53,11 +53,6 @@ abstract class sellyOrderStatus {
 if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') != 0) // If the method being requested doesn't include POST
     die(http_response_code(500));
 
-$contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
-
-if(strcasecmp($contentType, 'application/json') != 0)
-    die(http_response_code(500));
-
 $content  = json_decode(trim(file_get_contents("php://input")), true); // Get Raw POST Data and Decode it from JSON
 
 $signature = hash_hmac('sha512', trim(file_get_contents("php://input")), trim($secret_key)); // Try to decode signature
