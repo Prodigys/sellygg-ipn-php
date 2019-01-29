@@ -1,4 +1,5 @@
 # sellygg-ipn-php
+This only works on selly! Click [here](https://selly.gg) to go to their website.
 Webhook handler developed with PHP with well documented source-code. Everything is self explanatory.
 
 # Errors
